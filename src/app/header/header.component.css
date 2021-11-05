@@ -1,0 +1,11 @@
+.logo {
+    width: 180px;
+}
+
+.nav-item {
+    padding-left: 10px;
+}
+
+.active-link {
+    border-bottom: 3px dashed blue;
+}

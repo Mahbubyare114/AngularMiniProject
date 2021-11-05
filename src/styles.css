@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+hr {
+    width:10%;
+    border-top: 3px solid gray !important;
+    margin: 0px auto 0px auto !important;
+}
+
+.page-titles h2 {
+    color: white;
+}
+
+.section-title {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 5px;
+    color: #1d74bb;
+}
+
+.bg-gold {
+    background-color: #b29731!important;
+}
+
+.navbar .active {
+    border-bottom: 3px solid #b29731;
+}
