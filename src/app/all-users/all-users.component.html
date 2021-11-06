@@ -23,6 +23,7 @@
                 <th scope="col">Name</th>
                 <th scope="col">Username</th>
                 <th scope="col">Email</th>
+                <th scope="col">Address</th>
                 <th scope="col">Actions</th>
               
               </tr>
@@ -33,8 +34,11 @@
                 <td>{{user.id}}</td>
                 <td>{{user.name}}</td>
                 <td>{{user.username}}</td>
-                <td>{{user.email}}</td>
-                <td><button type="button" class="btn btn-success">View</button></td>
+                <td>{{user.email}}</td> 
+                <td>{{user.address.street}} - {{user.address.city}}</td>
+           
+
+                <td><button type="button" (click)=viewPost(user) class="btn btn-success">View Post</button></td>
                
               </tr>
               
@@ -44,4 +48,38 @@
         
         </div>
     </div>
+</div> 
+
+
+
+
+<div class="container my-5">
+  <div class="row">
+      <div class="col-md-12 mb-4 text-center" >
+
+        <table class="table table-striped" *ngIf="show">
+          <thead>
+            <tr>
+              <th scope="col">UserId</th>
+              <th scope="col">id</th>
+              <th scope="col">title</th>
+              <th scope="col">Body</th>
+            
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of singleUserPost">
+              
+              <td>{{user.userId}}</td>
+              <td>{{user.id}}</td>
+              <td>{{user.title}}</td>
+              <td>{{user.body}}</td>
+            </tr>
+            
+          </tbody>
+        </table>
+
+      
+      </div>
+  </div>
 </div> 

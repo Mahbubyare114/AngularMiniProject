@@ -24,4 +24,20 @@ getAllUsers_API():Promise<any> {
   });
 }
 
+
+  /* this function is to get Single User Posts */
+  getSingleUserPosts_API(id: number):Promise<any> {
+    return new Promise<any>((resolve, reject) => {
+      this.http.get('https://jsonplaceholder.typicode.com/users/' +id + '/posts' )
+        .toPromise()
+        .then(result => {
+          if (result) {
+            resolve(result);
+          }
+        }).catch(err => {
+          reject(err)
+        });
+    });
+  }
+
 }

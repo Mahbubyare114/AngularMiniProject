@@ -9,6 +9,9 @@ import { ApiService } from '../shared/api.service';
 export class AllUsersComponent implements OnInit {
 
   allUsers : any =[];
+  singleUserPost: any = [];
+  show: boolean = false;
+ 
 
   constructor(private apiService: ApiService) { }
 
@@ -23,6 +26,23 @@ export class AllUsersComponent implements OnInit {
       console.log(err);
       
     }) 
+
+
+  }
+
+  viewPost(user : any){
+
+    this.apiService.getSingleUserPosts_API(user.id)
+    .then(result => {
+      this.show = true
+     this.singleUserPost= result;
+      console.log(result);
+    }).catch(err => {
+      console.log(err);
+      
+    }) 
+
+    
   }
 
 }
