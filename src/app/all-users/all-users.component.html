@@ -14,19 +14,34 @@
 
 <div class="container my-5">
     <div class="row">
-        <div class="col-md-4 mb-4 text-center" *ngFor="let user of allUsers">
-            <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                  <h6 class="address">{{user.address}}</h6>
-                   <h4 class="email">{{user.email}}</h4> 
-                    <h4 class="id">{{user.id}}</h4> 
-                     <h4 class="card-title"> {{user.name}}</h4> 
-                      <h4 class="card-title"> {{user.password}}</h4> 
-                       <h4 class="card-title"> {{user.phone}}</h4> 
-                       <h4 class="card-title"> {{user.username}}</h4> 
-                  <a href="#" class="btn btn-primary">View User</a>
-                </div>
-              </div>
+        <div class="col-md-12 mb-4 text-center" >
+
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Username</th>
+                <th scope="col">Email</th>
+                <th scope="col">Actions</th>
+              
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let user of allUsers">
+                
+                <td>{{user.id}}</td>
+                <td>{{user.name}}</td>
+                <td>{{user.username}}</td>
+                <td>{{user.email}}</td>
+                <td><button type="button" class="btn btn-success">View</button></td>
+               
+              </tr>
+              
+            </tbody>
+          </table>
+
+        
         </div>
     </div>
 </div> 

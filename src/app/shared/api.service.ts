@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
+
 export class ApiService {
 
   constructor(private http: HttpClient) { }
@@ -11,7 +12,7 @@ export class ApiService {
   /* this function is to get AllUsers */
 getAllUsers_API():Promise<any> {
   return new Promise<any>((resolve, reject) => {
-    this.http.get('https://fakestoreapi.com/users')
+    this.http.get('https://jsonplaceholder.typicode.com/users')
       .toPromise()
       .then(result => {
         if (result) {
