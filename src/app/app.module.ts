@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { SingleUserComponent } from './single-user/single-user.component';
 import { HttpClientModule} from '@angular/common/http';
+import { ViewUserPostComponent } from './view-user-post/view-user-post.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HttpClientModule} from '@angular/common/http';
     AllUsersComponent,
     HomeComponent,
     AboutUsComponent,
-    SingleUserComponent
+    SingleUserComponent,
+    ViewUserPostComponent
   ],
   imports: [
     BrowserModule,

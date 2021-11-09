@@ -6,13 +6,14 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { SingleUserComponent } from './single-user/single-user.component';
+import { ViewUserPostComponent } from './view-user-post/view-user-post.component';
 
 const routes: Routes = [
   {
     path: 'header', component: HeaderComponent,
   },
   {
-    path : ' ', component: HomeComponent,
+    path : '', component: HomeComponent,
   },
   
   {
@@ -25,8 +26,12 @@ const routes: Routes = [
     path : 'all-users', component: AllUsersComponent,
   },
   {
-    path : 'single-user', component: SingleUserComponent,
+    path : 'single-user/:id', component: SingleUserComponent,
+  },
+  {
+    path : 'view-user-post', component: ViewUserPostComponent,
   }
+  
   
 ];
 

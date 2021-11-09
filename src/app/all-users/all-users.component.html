@@ -1,16 +1,16 @@
 
-<div class="container-fluid bg-light py-3">
+<div class="container-fluid bg-secondary py-3">
     <div class="row text-center">
         <h3>All Users</h3>
     </div>
 </div>
-<!-- 
+
 <div *ngIf="isLoading" class="d-flex justify-content-center my-5">
     <div class="spinner-grow" role="status">
       <span class="visually-hidden">Loading...</span>
     </div>
   </div>
--->
+
 
 <div class="container my-5">
     <div class="row">
@@ -38,7 +38,7 @@
                 <td>{{user.address.street}} - {{user.address.city}}</td>
            
 
-                <td><button type="button" (click)=viewPost(user) class="btn btn-success">View Post</button></td>
+                <td><button type="button" (click)="viewUser(user)" class="btn btn-success">View Post</button></td>
                
               </tr>
               
@@ -52,13 +52,15 @@
 
 
 
-
+<!-- 
 <div class="container my-5">
   <div class="row">
       <div class="col-md-12 mb-4 text-center" >
-
-        <table class="table table-striped" *ngIf="show">
+  
+        <table class="table table-striped">
+          
           <thead>
+           
             <tr>
               <th scope="col">UserId</th>
               <th scope="col">id</th>
@@ -82,4 +84,4 @@
       
       </div>
   </div>
-</div> 
+</div>  -->
